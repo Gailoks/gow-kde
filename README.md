@@ -16,7 +16,7 @@ title = 'Desktop (kde)'
 [apps.runner]
 type = 'docker'
 name = 'WolfKDE'
-image = 'ghcr.io/games-on-whales/kde:edge'
+image = 'ghcr.io/games-on-whales/kde:custom'
 env = ['GOW_REQUIRED_DEVICES=/dev/input/* /dev/dri/* /dev/nvidia*']
 devices = []
 mounts = []
