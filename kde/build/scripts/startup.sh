@@ -27,10 +27,6 @@ flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/fl
 sudo /opt/gow/startdbus
 export $(dbus-launch)
 
-# Heroic symlync to shared storage
-[ -d $HOME/Games ] || ln -s /shared /home/retro/Games
-
-
 if [ ! -f $HOME/.config/kwinrc ]; then
 	kwriteconfig5 --file $HOME/.config/kwinrc --group Compositing --key Enabled enable
 fi
@@ -43,13 +39,3 @@ export DE=kde
 export DESKTOP_SESSION=kde
 export XDG_SESSION_TYPE=wayland
 launcher startplasma-wayland --xwyaland
-# Check eula
-#[ -f $HOME/EULA ] || echo eula=false > $HOME/EULA
-#if grep -Fxq "eula=true" $HOME/EULA
-#then
-#    gow_log "EULA accepted"
-#    startplasma-wayland --xwyaland
-#else
-#    gow_log "EULA regected"
-#    firefox
-#fi
