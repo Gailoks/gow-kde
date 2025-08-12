@@ -1,13 +1,12 @@
 To build this you should run
 ```bash
-docker build -t ghcr.io/games-on-whales/kde:custom --build-arg BASE_APP_IMAGE=ghcr.io/games-on-whales/base-app:edge .
+docker build -t gailoks/gow-kde:latest .
 ```
+There is no prebuilt image sorry
 
-Note
-There is a bug with mouse in fullscreen x11 apps. Press right ctrl to fix it. And again if you return to desktop
+Current state is not working
 
-
-# Wolf config toml
+# Wolf config toml (old)
 
 ```toml
 [[apps]]
