@@ -46,9 +46,11 @@ rm -rf /var/lib/apt/lists/*
 locale-gen en_US.UTF-8
 locale-gen ru_RU.UTF-8
 
+# User add
+useradd --create-home --shell /bin/bash retro
+
 _INSTALL_PACKAGES
 
 WORKDIR /
 
 COPY entrypoint.sh .
-RUN useradd --create-home --shell /bin/bash retro
